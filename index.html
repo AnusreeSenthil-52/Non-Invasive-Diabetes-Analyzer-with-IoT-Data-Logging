@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breath Test Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>🧪 Breath Test Entry</h1>
+    <form id="breathForm">
+      <label>Name:</label>
+      <input type="text" id="name" required />
+
+      <label>Age:</label>
+      <input type="number" id="age" required />
+
+      <label>Gender:</label>
+      <select id="gender" required>
+        <option value="" disabled selected>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Acetone Level (ppm):</label>
+      <input type="text" id="acetone" required />
+
+      <label>Result:</label>
+      <select id="result" required>
+        <option value="" disabled selected>Select</option>
+        <option>Positive</option>
+        <option>Negative</option>
+      </select>
+
+      <button type="submit">Send Report</button>
+    </form>
+    <p id="statusMsg"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
